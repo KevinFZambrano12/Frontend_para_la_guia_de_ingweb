@@ -11,7 +11,7 @@ function App() {
   }, []);
 
   const obtenerTareas = async () => {
-    const resp = await fetch("https://TU_API.onrender.com/api/index.php");
+    const resp = await fetch("https://umb-web-taller-0az6.onrender.com");
     const data = await resp.json();
     setTareas(data);
   };
@@ -19,7 +19,7 @@ function App() {
   const agregarTarea = async (e) => {
     e.preventDefault();
 
-    await fetch("https://TU_API.onrender.com/api/index.php", {
+    await fetch("https://umb-web-taller-0az6.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ titulo }),
